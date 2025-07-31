@@ -88,7 +88,7 @@ export default function BlogSection() {
 
   return (
     <div className="bg-white text-gray-900 py-16 lg:py-24">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header and Navigation */}
         <div className="flex justify-between items-center sm:items-start mb-12 lg:mb-20">
           {/* Navigation Arrows (Top Left) */}

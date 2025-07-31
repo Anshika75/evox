@@ -50,7 +50,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-6 items-between sm:items-center sm:gap-12">
               <Link
                 href={heroContent.primaryButton.href}
-                className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all duration-200 flex items-center space-x-3 group plus-jakarta-sans-regular justify-center sm:justify-start"
+                className="bg-custom-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition-all duration-200 flex items-center space-x-3 group plus-jakarta-sans-regular justify-center sm:justify-start"
               >
                 <span>{heroContent.primaryButton.text}</span>
                 {heroContent.primaryButton.icon && (
