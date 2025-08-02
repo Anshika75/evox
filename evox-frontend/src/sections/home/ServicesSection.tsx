@@ -42,13 +42,11 @@ interface ProcessedServiceCard {
 }
 
 export default function ServicesSection({ serviceSectionData }: ServicesSectionProps) {
-  // All hooks must be called at the top
   const carouselInnerRef = useRef<HTMLDivElement>(null)
   const [visibleCardsCount, setVisibleCardsCount] = useState(3)
   const [currentSlide, setCurrentSlide] = useState(3)
   const [isTransitioning, setIsTransitioning] = useState(false)
 
-  // Process service cards from Strapi data
   const processedServiceCards: ProcessedServiceCard[] = serviceSectionData 
     ? serviceSectionData.serviceCard
         .filter(card => card.title && card.description && card.image && card.ctaExploreLink)

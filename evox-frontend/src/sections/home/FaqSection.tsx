@@ -28,12 +28,10 @@ interface faqItem {
 }
 
 export default function FaqSection({ faqSectionData }: FaqSectionProps) {
-  // Return early if no data from backend
   if (!faqSectionData) {
     return null;
   }
 
-  // Filter and map FAQ items, removing any with null Question or Answer
   const faqItems: faqItem[] = faqSectionData.faqItems
     .filter((data) => data.Question && data.Answer)
     .map((data) => ({
@@ -42,7 +40,6 @@ export default function FaqSection({ faqSectionData }: FaqSectionProps) {
       answer: data.Answer!,
     }));
 
-  // Return early if no valid FAQ items
   if (faqItems.length === 0) {
     return null;
   }

@@ -199,9 +199,7 @@ export async function getLandingPageData(): Promise<StrapiLandingPageData> {
 
   return response.json();
 }
-// Add these helper functions to c:\Users\avich\Documents\GitHub\evox\evox-frontend\src\lib\StrapiLandingPage.ts
 
-// Type guards for section identification
 export function isHeroSection(section: StrapiLandingPageData['data']['sections'][0]): section is Extract<StrapiLandingPageData['data']['sections'][0], { __component: "blocks.hero-section" }> {
   return section.__component === "blocks.hero-section";
 }

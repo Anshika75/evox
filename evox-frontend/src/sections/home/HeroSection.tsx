@@ -41,16 +41,13 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ heroSectionData }: HeroSectionProps) {
-  // Move all hooks to the top
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // Get trusted companies from Strapi data
   const trustedCompanies = heroSectionData?.trustedCompanies.logos || []
   
   const companiesPerSlide = 3
   const totalSlides = Math.ceil(trustedCompanies.length / companiesPerSlide)
 
-  // Auto-play carousel
   useEffect(() => {
     if (totalSlides > 1) {
       const interval = setInterval(() => {
@@ -61,7 +58,6 @@ export default function HeroSection({ heroSectionData }: HeroSectionProps) {
     }
   }, [totalSlides])
 
-  // Early return after all hooks
   if (!heroSectionData) {
     return null;
   }
