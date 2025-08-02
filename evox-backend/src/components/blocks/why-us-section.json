@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_why_us_sections",
+  "info": {
+    "displayName": "Why Us Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "features": {
+      "type": "component",
+      "component": "elements.why-us-feature",
+      "repeatable": true
+    },
+    "stats": {
+      "type": "component",
+      "component": "elements.why-us-stats",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

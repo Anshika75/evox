@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_footer_opening_hours",
+  "info": {
+    "displayName": "Footer Opening Hour"
+  },
+  "options": {},
+  "attributes": {
+    "dayRange": {
+      "type": "string"
+    },
+    "hours": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

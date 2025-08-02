@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_footer_contact_uses",
+  "info": {
+    "displayName": "Footer Contact Us"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "websiteLink": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

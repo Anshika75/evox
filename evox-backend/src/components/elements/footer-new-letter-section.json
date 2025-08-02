@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_footer_new_letter_sections",
+  "info": {
+    "displayName": "Footer NewLetter Section"
+  },
+  "options": {},
+  "attributes": {
+    "newsLetterTitle": {
+      "type": "text"
+    },
+    "newsLetterDescription": {
+      "type": "text"
+    },
+    "ctaSubscribeLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "ctaContactUsLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "newLetterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_why_us_features",
+  "info": {
+    "displayName": "Why Us Feature"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

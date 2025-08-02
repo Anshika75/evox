@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_footer_company_descriptions",
+  "info": {
+    "displayName": "Footer Company Description"
+  },
+  "options": {},
+  "attributes": {
+    "socialLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_blocks_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "richtext"
+    },
+    "ctaPrimaryLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "ctaSecondaryLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "trustedCompanies": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

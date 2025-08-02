@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_esg_banner_sections",
+  "info": {
+    "displayName": "ESG Banner Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "text"
+    },
+    "ctaPrimaryLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "ctaSecondaryLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

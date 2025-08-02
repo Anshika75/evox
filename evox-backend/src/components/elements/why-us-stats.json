@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_elements_why_us_stats",
+  "info": {
+    "displayName": "Why us Stats"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "label": {
+      "type": "text"
+    },
+    "targetValue": {
+      "type": "biginteger"
+    }
+  },
+  "config": {}
+}

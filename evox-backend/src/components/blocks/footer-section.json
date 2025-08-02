@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_blocks_footer_sections",
+  "info": {
+    "displayName": "Footer Section"
+  },
+  "options": {},
+  "attributes": {
+    "newLetterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "newLetterHeading": {
+      "type": "text"
+    },
+    "newLetterDescription": {
+      "type": "richtext"
+    },
+    "ctaSubscribeLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "ctaContactLink": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    },
+    "footerCompanyDescription": {
+      "type": "richtext"
+    },
+    "contactUs": {
+      "type": "component",
+      "component": "elements.footer-contact-us",
+      "repeatable": false
+    },
+    "openingHours": {
+      "type": "component",
+      "component": "elements.footer-opening-hour",
+      "repeatable": true
+    },
+    "quickLink": {
+      "type": "component",
+      "component": "elements.footer-quick-links",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

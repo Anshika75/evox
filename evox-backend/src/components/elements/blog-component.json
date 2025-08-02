@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_elements_blog_components",
+  "info": {
+    "displayName": "Blog Component"
+  },
+  "options": {},
+  "attributes": {
+    "blogHighlight": {
+      "type": "string"
+    },
+    "published": {
+      "type": "date"
+    },
+    "excerpt": {
+      "type": "richtext"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ctaText": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

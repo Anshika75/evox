@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blocks_faq_sections",
+  "info": {
+    "displayName": "FAQ Section"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "faqItems": {
+      "type": "component",
+      "component": "elements.faq-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_navbar_sections",
+  "info": {
+    "displayName": "Navbar Section"
+  },
+  "options": {},
+  "attributes": {
+    "phoneNumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
