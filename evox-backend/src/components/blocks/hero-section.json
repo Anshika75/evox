@@ -21,11 +21,6 @@
       "component": "elements.link",
       "repeatable": false
     },
-    "trustedCompanies": {
-      "type": "component",
-      "component": "elements.logo",
-      "repeatable": false
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -35,6 +30,11 @@
         "videos",
         "audios"
       ]
+    },
+    "trustedCompanies": {
+      "type": "component",
+      "component": "elements.truested-company",
+      "repeatable": false
     }
   },
   "config": {}

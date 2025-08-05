@@ -26,7 +26,13 @@ export default async function HomePage() {
           trustedCompanies: {
             id: section.trustedCompanies.id,
             title: section.trustedCompanies.title,
-            logos: section.trustedCompanies.logos
+            logos: section.trustedCompanies.companyLogos.map((logo: any) => ({
+              id: logo.logoImage.id,
+              documentId: logo.logoImage.documentId,
+              name: logo.logoImage.name,
+              alternativeText: logo.logoImage.alternativeText || null,
+              url: logo.logoImage.url
+            }))
           },
           image: {
             id: section.image.id,

@@ -42,7 +42,9 @@ interface ProcessedBlogPost {
   isExternal: boolean;
 }
 
+
 export default function BlogSection({ blogSectionData }: BlogSectionProps) {
+
   // All hooks must be called at the top, before any early returns
   const carouselInnerRef = useRef<HTMLDivElement>(null)
   const [visibleCardsCount, setVisibleCardsCount] = useState(3)
@@ -79,8 +81,7 @@ export default function BlogSection({ blogSectionData }: BlogSectionProps) {
       } else {
         setVisibleCardsCount(3)
       }
-    }
-
+  }
     handleResize()
     window.addEventListener("resize", handleResize)
     return () => window.removeEventListener("resize", handleResize)
@@ -137,7 +138,6 @@ export default function BlogSection({ blogSectionData }: BlogSectionProps) {
     return "translateX(0px)"
   }
 
-  // Early returns after all hooks
   if (!blogSectionData) {
     return null;
   }

@@ -40,11 +40,17 @@ interface HeroSectionProps {
   } | null;
 }
 
+interface logo {
+  id:number;
+  name:string;
+  alternativeText: string |null;
+  url:string
+}
+
+
 export default function HeroSection({ heroSectionData }: HeroSectionProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
-
   const trustedCompanies = heroSectionData?.trustedCompanies.logos || []
-  
   const companiesPerSlide = 3
   const totalSlides = Math.ceil(trustedCompanies.length / companiesPerSlide)
 
@@ -61,6 +67,18 @@ export default function HeroSection({ heroSectionData }: HeroSectionProps) {
   if (!heroSectionData) {
     return null;
   }
+
+  const logos: logo[]= heroSectionData.trustedCompanies.logos.map((data)=>({
+    id:data.id,
+    name:data.name,
+    alternativeText:data.alternativeText,
+    url:data.url
+
+  }))
+                         
+  
+  
+ 
 
   return (
     <div className="bg-white">
@@ -136,7 +154,7 @@ export default function HeroSection({ heroSectionData }: HeroSectionProps) {
                       {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                         <div key={slideIndex} className="w-full flex-shrink-0">
                           <div className="grid grid-cols-3 gap-4">
-                            {trustedCompanies
+                            {logos
                               .slice(slideIndex * companiesPerSlide, slideIndex * companiesPerSlide + companiesPerSlide)
                               .map((company) => (
                                 <div key={company.id} className="flex items-center justify-center">

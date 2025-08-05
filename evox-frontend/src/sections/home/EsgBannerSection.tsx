@@ -38,6 +38,7 @@ export default function EsgBannerSection({ esgBannerSectionData }: EsgBannerSect
       fill
       priority
     />
+    
   </div>
       {/* Optional: Overlay for better text readability if needed */}
        <div className="absolute inset-0 bg-black opacity-30"></div>

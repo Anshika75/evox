@@ -1,7 +1,5 @@
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
 
-
-
 export interface StrapiLandingPageData {
   data: {
     id: number;
@@ -31,12 +29,16 @@ export interface StrapiLandingPageData {
         trustedCompanies: {
           id: number;
           title: string;
-          logos: Array<{
+          companyLogos: Array<{
             id: number;
-            documentId: string;
-            name: string;
-            alternativeText: string | null;
-            url: string;
+            title: string;
+            logoImage:{
+              id:number;
+              documentId: string;
+              name: string;
+              alternativeText: string | null;
+              url: string;
+            }
           }>;
         };
         image: {
@@ -184,12 +186,14 @@ export interface StrapiLandingPageData {
   };
   meta: Record<string, unknown>;
 }
- 
+
+
+
 export async function getLandingPageData(): Promise<StrapiLandingPageData> {
-  const url = `${STRAPI_URL}/api/landing-page?populate[header][on][blocks.navbar-section][populate]=*&populate[sections][on][blocks.hero-section][populate][trustedCompanies][populate][logos][fields]=id,name,alternativeText,url&populate[sections][on][blocks.hero-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.hero-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.hero-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.service-section][populate][serviceCard][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][ctaExploreLink]=*&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][coverImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][ctaText]=*&populate[sections][on][blocks.why-us-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.why-us-section][populate][features]=*&populate[sections][on][blocks.why-us-section][populate][stats]=*&populate[sections][on][blocks.esg-banner-section][populate][backgroundImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.esg-banner-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.esg-banner-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.faq-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.faq-section][populate][faqItems]=*`;
+  const url = `${STRAPI_URL}/api/landing-page?populate[header][on][blocks.navbar-section][populate]=*&populate[sections][on][blocks.hero-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.hero-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.hero-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.hero-section][populate][trustedCompanies][populate][companyLogos][populate][logoImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][ctaExploreLink]=*&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][coverImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][ctaText]=*&populate[sections][on][blocks.why-us-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.why-us-section][populate][features]=*&populate[sections][on][blocks.why-us-section][populate][stats]=*&populate[sections][on][blocks.esg-banner-section][populate][backgroundImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.esg-banner-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.esg-banner-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.faq-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.faq-section][populate][faqItems]=*`;
   
   const response = await fetch(url, {
-    next: { revalidate: 0 } // Cache for 1 hour
+    next: { revalidate: 0 } 
   });
   
 

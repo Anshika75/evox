@@ -77,7 +77,10 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     subTitle: Schema.Attribute.RichText;
     title: Schema.Attribute.String;
-    trustedCompanies: Schema.Attribute.Component<'elements.logo', false>;
+    trustedCompanies: Schema.Attribute.Component<
+      'elements.truested-company',
+      false
+    >;
   };
 }
 
@@ -228,11 +231,8 @@ export interface ElementsLogo extends Struct.ComponentSchema {
     displayName: 'Logo';
   };
   attributes: {
-    logos: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
-    title: Schema.Attribute.String;
+    logoImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -246,6 +246,17 @@ export interface ElementsServiceSection extends Struct.ComponentSchema {
     description: Schema.Attribute.RichText;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsTruestedCompany extends Struct.ComponentSchema {
+  collectionName: 'components_elements_truested_companies';
+  info: {
+    displayName: 'trustedCompany';
+  };
+  attributes: {
+    companyLogos: Schema.Attribute.Component<'elements.logo', true>;
+    companyName: Schema.Attribute.String;
   };
 }
 
@@ -294,6 +305,7 @@ declare module '@strapi/strapi' {
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
       'elements.service-section': ElementsServiceSection;
+      'elements.truested-company': ElementsTruestedCompany;
       'elements.why-us-feature': ElementsWhyUsFeature;
       'elements.why-us-stats': ElementsWhyUsStats;
     }

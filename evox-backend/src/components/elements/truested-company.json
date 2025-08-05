@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_elements_truested_companies",
+  "info": {
+    "displayName": "trustedCompany"
+  },
+  "options": {},
+  "attributes": {
+    "companyLogos": {
+      "type": "component",
+      "component": "elements.logo",
+      "repeatable": true
+    },
+    "companyName": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

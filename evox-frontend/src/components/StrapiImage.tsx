@@ -27,7 +27,6 @@ export function StrapiImage({
   
   if (!imageUrl) return null;
 
-  // If fill is true, don't pass width and height
   if (fill) {
     return (
       <Image 
@@ -42,9 +41,6 @@ export function StrapiImage({
     );
   }
 
-  // For non-fill images, provide default dimensions if not specified
-  // const imageWidth = width || null;
-  // const imageHeight = height || 600;
 
   return (  
     <Image 
