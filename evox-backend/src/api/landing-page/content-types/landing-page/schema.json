@@ -31,7 +31,8 @@
     "footer": {
       "type": "dynamiczone",
       "components": [
-        "blocks.footer-section"
+        "blocks.footer-section",
+        "blocks.subscribe-section"
       ]
     }
   }

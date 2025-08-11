@@ -5,10 +5,13 @@
   },
   "options": {},
   "attributes": {
-    "dayRange": {
+    "heading": {
       "type": "string"
     },
-    "hours": {
+    "dayRange1": {
+      "type": "string"
+    },
+    "dayRange2": {
       "type": "string"
     }
   },

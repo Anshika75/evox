@@ -105,6 +105,7 @@ export default async function HomePage() {
   } catch (error) {
     console.error('Failed to fetch landing page data:', error);
   }
+  
 
   return (
     <>

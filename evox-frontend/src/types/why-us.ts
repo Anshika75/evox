@@ -7,6 +7,7 @@ export interface WhyUsContent {
     title: string // Added title for each feature pointer
     description: string
   }[]
+  
   stats: {
     value: string
     label: string

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_blocks_subscribe_sections",
+  "info": {
+    "displayName": "Subscribe Section"
+  },
+  "options": {},
+  "attributes": {
+    "newsLetterHeading": {
+      "type": "string"
+    },
+    "newsLetterDescription": {
+      "type": "text"
+    },
+    "newsLetterImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ctaSubscribeButton": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    },
+    "ctaContactButton": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -1,6 +1,10 @@
+
+
+
 const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
 
 export interface StrapiLandingPageData {
+
   data: {
     id: number;
     documentId: string;
@@ -19,6 +23,9 @@ export interface StrapiLandingPageData {
         isExternal: boolean;
       }>;
     }>;
+
+
+
     sections: Array<
       // Hero Section
       {
@@ -32,8 +39,8 @@ export interface StrapiLandingPageData {
           companyLogos: Array<{
             id: number;
             title: string;
-            logoImage:{
-              id:number;
+            logoImage: {
+              id: number;
               documentId: string;
               name: string;
               alternativeText: string | null;
@@ -183,19 +190,91 @@ export interface StrapiLandingPageData {
         }>;
       }
     >;
+
+
+    footer: Array<
+      | {
+        __component: "blocks.subscribe-section";
+        id: number;
+        newsLetterHeading: string;
+        newsLetterDescription: string;
+        newsLetterImage: {
+          id: number;
+          documentId: string;
+          name: string;
+          url: string;
+          alternativeText: string | null;
+        };
+        ctaSubscribeButton: {
+          id: number;
+          text: string;
+          href: string;
+          isExternal: boolean;
+        };
+        ctaContactButton: {
+          id: number;
+          text: string;
+          href: string;
+          isExternal: boolean;
+        };
+      }
+      | {
+        __component: "blocks.footer-section";
+        id: number;
+        footerCompanyDescription: string;
+        socialLinks: Array<{
+          id: number;
+          text: string;
+          href: string;
+          isExternal: boolean;
+        }>;
+        contactUs: {
+          id: number;
+          address: string;
+          phoneNumber: string;
+          email: string;
+          websiteLink: string;
+          heading: string;
+        };
+        openingHours: {
+          id: number;
+          heading: string;
+          dayRange1: string;
+          dayRange2: string;
+        };
+        quickLink: {
+          id: number;
+          heading: string;
+          links: Array<{
+            id: number;
+            text: string;
+            href: string;
+            isExternal: boolean;
+          }>;
+        };
+      }
+    >;
+
   };
   meta: Record<string, unknown>;
 }
 
 
 
+
+
+
+
+
 export async function getLandingPageData(): Promise<StrapiLandingPageData> {
-  const url = `${STRAPI_URL}/api/landing-page?populate[header][on][blocks.navbar-section][populate]=*&populate[sections][on][blocks.hero-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.hero-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.hero-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.hero-section][populate][trustedCompanies][populate][companyLogos][populate][logoImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][ctaExploreLink]=*&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][coverImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][ctaText]=*&populate[sections][on][blocks.why-us-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.why-us-section][populate][features]=*&populate[sections][on][blocks.why-us-section][populate][stats]=*&populate[sections][on][blocks.esg-banner-section][populate][backgroundImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.esg-banner-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.esg-banner-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.faq-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.faq-section][populate][faqItems]=*`;
-  
+  const url = `${STRAPI_URL}/api/landing-page?populate[header][on][blocks.navbar-section][populate]=*&populate[sections][on][blocks.hero-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.hero-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.hero-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.hero-section][populate][trustedCompanies][populate][companyLogos][populate][logoImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.service-section][populate][serviceCard][populate][ctaExploreLink]=*&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][coverImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.blog-section][populate][featuredBlogPost][populate][ctaText]=*&populate[sections][on][blocks.why-us-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.why-us-section][populate][features]=*&populate[sections][on][blocks.why-us-section][populate][stats]=*&populate[sections][on][blocks.esg-banner-section][populate][backgroundImage][fields]=id,name,alternativeText,url&populate[sections][on][blocks.esg-banner-section][populate][ctaPrimaryLink]=*&populate[sections][on][blocks.esg-banner-section][populate][ctaSecondaryLink]=*&populate[sections][on][blocks.faq-section][populate][image][fields]=id,name,alternativeText,url&populate[sections][on][blocks.faq-section][populate][faqItems]=*&populate[footer][on][blocks.subscribe-section][populate][newsLetterImage][fields]=id,name,url,alternativeText&populate[footer][on][blocks.subscribe-section][populate][ctaSubscribeButton]=*&populate[footer][on][blocks.subscribe-section][populate][ctaContactButton]=*&populate[footer][on][blocks.footer-section][populate][socialLinks]=*&populate[footer][on][blocks.footer-section][populate][contactUs]=*&populate[footer][on][blocks.footer-section][populate][openingHours]=*&populate[footer][on][blocks.footer-section][populate][quickLink][populate][links]=*`;
+
+
+
   const response = await fetch(url, {
-    next: { revalidate: 0 } 
+    next: { revalidate: 0 }
   });
-  
+
 
   if (!response.ok) {
     throw new Error('Failed to fetch navbar data');
@@ -212,6 +291,7 @@ export function isServiceSection(section: StrapiLandingPageData['data']['section
   return section.__component === "blocks.service-section";
 }
 
+
 export function isBlogSection(section: StrapiLandingPageData['data']['sections'][0]): section is Extract<StrapiLandingPageData['data']['sections'][0], { __component: "blocks.blog-section" }> {
   return section.__component === "blocks.blog-section";
 }
@@ -227,3 +307,6 @@ export function isEsgBannerSection(section: StrapiLandingPageData['data']['secti
 export function isFaqSection(section: StrapiLandingPageData['data']['sections'][0]): section is Extract<StrapiLandingPageData['data']['sections'][0], { __component: "blocks.faq-section" }> {
   return section.__component === "blocks.faq-section";
 }
+
+
+
