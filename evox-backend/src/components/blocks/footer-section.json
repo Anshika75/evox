@@ -5,32 +5,6 @@
   },
   "options": {},
   "attributes": {
-    "newLetterImage": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "newLetterHeading": {
-      "type": "text"
-    },
-    "newLetterDescription": {
-      "type": "richtext"
-    },
-    "ctaSubscribeLink": {
-      "type": "component",
-      "component": "elements.link",
-      "repeatable": false
-    },
-    "ctaContactLink": {
-      "type": "component",
-      "component": "elements.link",
-      "repeatable": false
-    },
     "socialLinks": {
       "type": "component",
       "component": "elements.link",
@@ -47,7 +21,7 @@
     "openingHours": {
       "type": "component",
       "component": "elements.footer-opening-hour",
-      "repeatable": true
+      "repeatable": false
     },
     "quickLink": {
       "type": "component",

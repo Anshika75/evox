@@ -49,17 +49,10 @@ export interface BlocksFooterSection extends Struct.ComponentSchema {
   };
   attributes: {
     contactUs: Schema.Attribute.Component<'elements.footer-contact-us', false>;
-    ctaContactLink: Schema.Attribute.Component<'elements.link', false>;
-    ctaSubscribeLink: Schema.Attribute.Component<'elements.link', false>;
     footerCompanyDescription: Schema.Attribute.RichText;
-    newLetterDescription: Schema.Attribute.RichText;
-    newLetterHeading: Schema.Attribute.Text;
-    newLetterImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
     openingHours: Schema.Attribute.Component<
       'elements.footer-opening-hour',
-      true
+      false
     >;
     quickLink: Schema.Attribute.Component<'elements.footer-quick-links', false>;
     socialLinks: Schema.Attribute.Component<'elements.link', true>;
@@ -106,6 +99,22 @@ export interface BlocksServiceSection extends Struct.ComponentSchema {
     heading: Schema.Attribute.String;
     preHeading: Schema.Attribute.String;
     serviceCard: Schema.Attribute.Component<'elements.service-section', true>;
+  };
+}
+
+export interface BlocksSubscribeSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_subscribe_sections';
+  info: {
+    displayName: 'Subscribe Section';
+  };
+  attributes: {
+    ctaContactButton: Schema.Attribute.Component<'elements.link', false>;
+    ctaSubscribeButton: Schema.Attribute.Component<'elements.link', false>;
+    newsLetterDescription: Schema.Attribute.Text;
+    newsLetterHeading: Schema.Attribute.String;
+    newsLetterImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -169,8 +178,8 @@ export interface ElementsFooterContactUs extends Struct.ComponentSchema {
   attributes: {
     address: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
+    heading: Schema.Attribute.String;
     phoneNumber: Schema.Attribute.String;
-    title: Schema.Attribute.String;
     websiteLink: Schema.Attribute.String;
   };
 }
@@ -197,8 +206,9 @@ export interface ElementsFooterOpeningHour extends Struct.ComponentSchema {
     displayName: 'Footer Opening Hour';
   };
   attributes: {
-    dayRange: Schema.Attribute.String;
-    hours: Schema.Attribute.String;
+    dayRange1: Schema.Attribute.String;
+    dayRange2: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
   };
 }
 
@@ -208,8 +218,8 @@ export interface ElementsFooterQuickLinks extends Struct.ComponentSchema {
     displayName: 'Footer Quick Links';
   };
   attributes: {
+    heading: Schema.Attribute.String;
     links: Schema.Attribute.Component<'elements.link', true>;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -294,6 +304,7 @@ declare module '@strapi/strapi' {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.navbar-section': BlocksNavbarSection;
       'blocks.service-section': BlocksServiceSection;
+      'blocks.subscribe-section': BlocksSubscribeSection;
       'blocks.why-us-section': BlocksWhyUsSection;
       'elements.blog-component': ElementsBlogComponent;
       'elements.faq-item': ElementsFaqItem;

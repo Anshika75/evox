@@ -28,6 +28,7 @@ const getSocialIcon = (text: string) => {
 };
 
 export default function TopNavbar({ navbarData }: TopNavbarProps) {
+  
   // Fallback data
   const phoneNumber = navbarData?.phoneNumber || '+916202271745';
   const email = navbarData?.email || 'corporate@evox.com';

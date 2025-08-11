@@ -12,6 +12,8 @@ interface StrapiImageProps {
   [key: string]: string | number | boolean | undefined;
 }
 
+
+
 export function StrapiImage({
   src,
   alt,
@@ -24,33 +26,33 @@ export function StrapiImage({
 }: Readonly<StrapiImageProps>) {
   const imageUrl = getStrapiMedia(src);
   console.log("img: " + imageUrl);
-  
+
   if (!imageUrl) return null;
 
   if (fill) {
     return (
-      <Image 
-        src={imageUrl} 
-        alt={alt} 
+      <Image
+        src={imageUrl}
+        alt={alt}
         className={className}
         fill
         priority={priority}
         style={{ objectFit: 'cover' }}
-        {...rest} 
+        {...rest}
       />
     );
   }
 
 
-  return (  
-    <Image 
-      src={imageUrl} 
-      alt={alt} 
+  return (
+    <Image
+      src={imageUrl}
+      alt={alt}
       className={className}
       width={width}
       height={height}
       priority={priority}
-      {...rest} 
+      {...rest}
     />
   );
 }

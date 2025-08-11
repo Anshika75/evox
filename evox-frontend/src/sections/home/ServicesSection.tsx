@@ -4,6 +4,8 @@ import { StrapiImage } from "@/components/StrapiImage";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+
+
 interface ServicesSectionProps {
   serviceSectionData?: {
     preHeading: string;
@@ -228,14 +230,21 @@ interface ServiceCardItemProps {
 }
 
 function ServiceCardItem({ card }: ServiceCardItemProps) {
+
+  const [isHovered, setIsHovered] = useState(false)
+
+
   return (
-    <div className="flex-shrink-0 w-full">
+    <div
+      className="flex-shrink-0 w-full">
       <div className="relative h-[550px] overflow-hidden shadow-lg group transition-all duration-700 ease-in-out cursor-pointer">
+        {/* Image */}
         <StrapiImage
+          height={500}
+          width={500}
           src={card.image || "/placeholder.svg"}
           alt={card.alt}
           className="absolute inset-0 w-full h-full object-cover"
-          fill
         />
 
         <div className="absolute inset-0 transition-all duration-700 ease-in-out group-hover:bg-[#010205] bg-[rgba(54,54,54,0.5)]"></div>
@@ -250,10 +259,10 @@ function ServiceCardItem({ card }: ServiceCardItemProps) {
             </p>
           </div>
 
+
+
           <Link
             href={card.link}
-            target={card.isExternal ? "_blank" : "_self"}
-            rel={card.isExternal ? "noopener noreferrer" : undefined}
             className="flex items-center text-white text-sm font-medium group-hover:text-gray-300 transition-colors duration-300 mt-auto"
           >
             {card.linkText}

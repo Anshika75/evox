@@ -1,13 +1,78 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-export default function Footer() {
+interface NavbarProps {
+
+    footerData?: {
+        id: number;
+        newsLetterHeading: string;
+        newsLetterDescription: string;
+        footerCompanyDescription: string;
+        newsLetterImage: {
+            id: number;
+            documentId: string;
+            name: string;
+            url: string;
+            alternativeText: string | null;
+        };
+        ctaSubscribeLink: {
+            id: number;
+            text: string;
+            href: string;
+            isExternal: boolean;
+        };
+
+        ctaContactLink: {
+            id: number;
+            text: string;
+            href: string;
+            isExternal: boolean;
+        };
+
+        socialLinks: Array<{
+            id: number;
+            text: string;
+            href: string;
+            isExternal: boolean;
+        }>;
+        contactUs: {
+            id: number;
+            address: string;
+            phoneNumber: string;
+            email: string;
+            websiteLink: string;
+            heading: string;
+        };
+        openingHours: {
+            id: number;
+            heading: string;
+            dayRange1: string;
+            dayRange2: string;
+        };
+        quickLink: {
+            id: number;
+            heading: string;
+            links: Array<{
+                id: number;
+                text: string;
+                href: string;
+                isExternal: boolean;
+            }>;
+        };
+    } | null
+
+}
+
+
+export default function Footer({ footerData }: NavbarProps) {
     const currentYear = new Date().getFullYear()
 
     return (
         <footer className="bg-custom-black text-gray-300 py-16 lg:py-24">
             <div className="px-4 sm:px-6 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 border-b border-gray-700">
+
+
                     {/* Column 1: Logo, Description, Social Media */}
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center justify-items-start">
@@ -26,9 +91,8 @@ export default function Footer() {
                                 className="h-8 w-auto hidden md:block"
                             />
                         </Link>
-                        <p className="text-sm tracking-wider font-extralight plus-jakarta-sans-extralight text-white opacity-50 leading-7">
-                            We are one of fastest B2B F&amp;B growing company in India with unique philosophy &quot;Eat well Live well&quot; which
-                            means eating quality food &amp; living happiest life forever.
+                        <p className="text-sm tracking-wider font-extralight plus-jakarta-sans-extralight text-white opacity-50 leading-7">{footerData?.footerCompanyDescription}
+
                         </p>
                         <div className="flex items-center space-x-4">
                             <a
@@ -38,6 +102,8 @@ export default function Footer() {
                             >
                                 <i className="fab fa-instagram text-custom-black text-lg"></i>
                             </a>
+
+
                             <a
                                 href="#"
                                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors duration-200"
@@ -45,6 +111,7 @@ export default function Footer() {
                             >
                                 <i className="fab fa-facebook-f text-custom-black text-lg"></i>
                             </a>
+
                             <a
                                 href="#"
                                 className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors duration-200"
@@ -61,6 +128,9 @@ export default function Footer() {
                         <p className="text-sm text-white plus-jakarta-sans-extralight font-extralight opacity-50 tracking-wider">Mon-Fri : 08.00 - 20.00</p>
                         <p className="text-sm text-white plus-jakarta-sans-extralight font-extralight opacity-50 tracking-wider">Sat-Sun: 10.00 - 16.00</p>
                     </div>
+
+
+
 
                     {/* Column 3: Quick Links */}
                     <div className="space-y-4">
@@ -103,6 +173,8 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
+
+
 
                     {/* Column 4: Contact Us */}
                     <div className="space-y-4">
