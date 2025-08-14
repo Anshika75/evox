@@ -1,12 +1,10 @@
-import { subscribeSectionContent } from "@/data/subscribe-data"
+import { subscribeSectionContent } from "@/data/home/subscribe-data"
 import Link from "next/link"
 
 export default function SubscribeSection() {
   return (
-    <div className="bg-blue-50 py-16 lg:py-24 px-4 md:px-6 lg:px-12">
+    <div className="pb-10 lg:pb-24 px-4 md:px-6 lg:px-12">
 
-
-      
       <div
         className="relative mx-auto bg-cover bg-center bg-no-repeat py-20 lg:py-28 rounded-2xl shadow-xl overflow-hidden"
         style={{ backgroundImage: `url(${subscribeSectionContent.backgroundImage.src})` }}

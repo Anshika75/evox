@@ -28,7 +28,7 @@ interface EsgBannerSectionProps {
 
 export default function EsgBannerSection({ esgBannerSectionData }: EsgBannerSectionProps) {
   return (
-    <div className="relative py-16 overflow-hidden">
+    <div className="relative py-10 overflow-hidden">
   {/* Background Image using StrapiImage */}
   <div className="absolute inset-0 z-0">
     <StrapiImage

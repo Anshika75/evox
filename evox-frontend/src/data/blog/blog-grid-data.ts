@@ -1,0 +1,355 @@
+import type { BlogGridPost, BlogGridContent } from "../../types/blog/blog-grid"
+
+export const blogGridContent: BlogGridContent = {
+  heading: "Our Latest News",
+}
+
+export const blogGridPosts: BlogGridPost[] = [
+  {
+    id: "featured-1",
+    title: "How to make a website look more attractive with llustrations",
+    excerpt:
+      "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=400&width=600&text=Featured+Blog+Post",
+    alt: "Featured blog post image",
+    category: "DEVELOPMENT",
+    date: "21 September 2020",
+    link: "/blog/featured-post",
+    featured: true,
+  },
+  {
+    id: "post-1",
+    title: "How to make a website look more attractive with illustrations",
+    excerpt:
+      "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Website illustrations blog post",
+    category: "DEVELOPMENT",
+    date: "21 September 2020",
+    author: {
+      name: "Author Name",
+      avatar: "/placeholder.svg?height=40&width=40&text=A",
+      initial: "A",
+    },
+    link: "/blog/website-illustrations",
+  },
+  {
+    id: "post-2",
+    title: "8 Rules of Thumb in UI Design",
+    excerpt:
+      "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "UI Design rules blog post",
+    category: "DEVELOPMENT",
+    date: "20 September 2020",
+    link: "/blog/ui-design-rules",
+  },
+  {
+    id: "post-3",
+    title: "How to build strong portfolio and get a Job in UI/UX",
+    excerpt:
+      "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Portfolio building blog post",
+    category: "DEVELOPMENT",
+    date: "19 September 2020",
+    link: "/blog/portfolio-building",
+  },
+  {
+    id: "post-4",
+    title: "How to make a website look more attractive with illustrations",
+    excerpt:
+      "Dynamically target high-payoff intellectual capital for customized technologies. Objectively integrate emerging core competencies before process-centric communities.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Website attractive blog post",
+    category: "DEVELOPMENT",
+    date: "18 September 2020",
+    link: "/blog/website-attractive",
+  },
+  {
+    id: "post-5",
+    title: "New Software for UI Design",
+    excerpt:
+      "Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "UI Design software blog post",
+    category: "DEVELOPMENT",
+    date: "17 September 2020",
+    link: "/blog/ui-software",
+  },
+  {
+    id: "post-6",
+    title: "How to build Creative Agency in Pandemic",
+    excerpt:
+      "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Creative agency blog post",
+    category: "DEVELOPMENT",
+    date: "16 September 2020",
+    link: "/blog/creative-agency",
+  },
+  {
+    id: "post-7",
+    title: "How to make easy money in Pandemic Situation",
+    excerpt:
+      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies to ensure proactive domination.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Easy money blog post",
+    category: "BUSINESS",
+    date: "15 September 2020",
+    link: "/blog/easy-money",
+  },
+  {
+    id: "post-8",
+    title: "Best Practices for Modern Web Development",
+    excerpt:
+      "Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Web development blog post",
+    category: "DEVELOPMENT",
+    date: "14 September 2020",
+    link: "/blog/web-development",
+  },
+  {
+    id: "post-9",
+    title: "The Future of Digital Marketing",
+    excerpt:
+      "Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Digital marketing blog post",
+    category: "MARKETING",
+    date: "13 September 2020",
+    link: "/blog/digital-marketing",
+  },
+  {
+    id: "post-10",
+    title: "Mobile App Development Trends 2024",
+    excerpt:
+      "Seamlessly empower fully researched growth strategies and interoperable internal or organic sources. Credibly innovate granular internal or organic sources.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Mobile app trends blog post",
+    category: "DEVELOPMENT",
+    date: "12 September 2020",
+    link: "/blog/mobile-app-trends",
+  },
+  {
+    id: "post-11",
+    title: "E-commerce Platform Comparison Guide",
+    excerpt:
+      "Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains.",
+    image: "/placeholder.svg?height=200&width=300&text=Ecommerce+Guide",
+    alt: "E-commerce guide blog post",
+    category: "BUSINESS",
+    date: "11 September 2020",
+    link: "/blog/ecommerce-guide",
+  },
+  {
+    id: "post-12",
+    title: "Cloud Computing Security Best Practices",
+    excerpt:
+      "Dramatically visualize customer directed convergence without revolutionary ROI. Efficiently unleash cross-media information without cross-media value.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Cloud security blog post",
+    category: "TECHNOLOGY",
+    date: "10 September 2020",
+    link: "/blog/cloud-security",
+  },
+  {
+    id: "post-13",
+    title: "AI and Machine Learning in Business",
+    excerpt:
+      "Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "AI in business blog post",
+    category: "TECHNOLOGY",
+    date: "09 September 2020",
+    link: "/blog/ai-business",
+  },
+  {
+    id: "post-14",
+    title: "Remote Work Productivity Tips",
+    excerpt:
+      "Completely pursue scalable customer service through sustainable potentialities. Dynamically visualize customer directed convergence without revolutionary ROI.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Remote work blog post",
+    category: "BUSINESS",
+    date: "08 September 2020",
+    link: "/blog/remote-work",
+  },
+  {
+    id: "post-15",
+    title: "Cybersecurity Threats and Prevention",
+    excerpt:
+      "Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Cybersecurity blog post",
+    category: "TECHNOLOGY",
+    date: "07 September 2020",
+    link: "/blog/cybersecurity",
+  },
+  {
+    id: "post-16",
+    title: "Social Media Marketing Strategies",
+    excerpt:
+      "Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently unleash cross-media information without cross-media value.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Social media marketing blog post",
+    category: "MARKETING",
+    date: "06 September 2020",
+    link: "/blog/social-media",
+  },
+  {
+    id: "post-17",
+    title: "Blockchain Technology Explained",
+    excerpt:
+      "Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Blockchain",
+    alt: "Blockchain technology blog post",
+    category: "TECHNOLOGY",
+    date: "05 September 2020",
+    link: "/blog/blockchain",
+  },
+  {
+    id: "post-18",
+    title: "Content Marketing ROI Measurement",
+    excerpt:
+      "Seamlessly empower fully researched growth strategies and interoperable internal or organic sources. Credibly innovate granular internal or organic sources.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Content+ROI",
+    alt: "Content marketing ROI blog post",
+    category: "MARKETING",
+    date: "04 September 2020",
+    link: "/blog/content-roi",
+  },
+  {
+    id: "post-19",
+    title: "Database Optimization Techniques",
+    excerpt:
+      "Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Database optimization blog post",
+    category: "DEVELOPMENT",
+    date: "03 September 2020",
+    link: "/blog/database-optimization",
+  },
+  {
+    id: "post-20",
+    title: "Customer Experience Design Principles",
+    excerpt:
+      "Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Customer experience design blog post",
+    category: "DESIGN",
+    date: "02 September 2020",
+    link: "/blog/cx-design",
+  },
+  {
+    id: "post-21",
+    title: "API Development Best Practices",
+    excerpt:
+      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "API development blog post",
+    category: "DEVELOPMENT",
+    date: "01 September 2020",
+    link: "/blog/api-development",
+  },
+  {
+    id: "post-22",
+    title: "Brand Identity Design Guidelines",
+    excerpt:
+      "At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Brand identity design blog post",
+    category: "DESIGN",
+    date: "31 August 2020",
+    link: "/blog/brand-identity",
+  },
+  {
+    id: "post-23",
+    title: "DevOps Implementation Strategy",
+    excerpt:
+      "Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "DevOps strategy blog post",
+    category: "DEVELOPMENT",
+    date: "30 August 2020",
+    link: "/blog/devops-strategy",
+  },
+  {
+    id: "post-24",
+    title: "Email Marketing Automation",
+    excerpt:
+      "Dynamically target high-payoff intellectual capital for customized technologies. Objectively integrate emerging core competencies before process-centric communities.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Email marketing automation blog post",
+    category: "MARKETING",
+    date: "29 August 2020",
+    link: "/blog/email-automation",
+  },
+  {
+    id: "post-25",
+    title: "Progressive Web Apps Development",
+    excerpt:
+      "Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "PWA development blog post",
+    category: "DEVELOPMENT",
+    date: "28 August 2020",
+    link: "/blog/pwa-development",
+  },
+  {
+    id: "post-26",
+    title: "Data Analytics for Business Growth",
+    excerpt:
+      "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Data analytics blog post",
+    category: "BUSINESS",
+    date: "27 August 2020",
+    link: "/blog/data-analytics",
+  },
+  {
+    id: "post-27",
+    title: "Responsive Design Frameworks Comparison",
+    excerpt:
+      "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Responsive design frameworks blog post",
+    category: "DEVELOPMENT",
+    date: "26 August 2020",
+    link: "/blog/responsive-frameworks",
+  },
+  {
+    id: "post-28",
+    title: "SEO Optimization Strategies 2024",
+    excerpt:
+      "Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. Bring to the table win-win survival strategies.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "SEO strategies blog post",
+    category: "MARKETING",
+    date: "25 August 2020",
+    link: "/blog/seo-strategies",
+  },
+  {
+    id: "post-29",
+    title: "Microservices Architecture Guide",
+    excerpt:
+      "Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Microservices architecture blog post",
+    category: "DEVELOPMENT",
+    date: "24 August 2020",
+    link: "/blog/microservices",
+  },
+  {
+    id: "post-30",
+    title: "Digital Transformation Roadmap",
+    excerpt:
+      "Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change.",
+    image: "https://preview-evox-project-setup-kzmoejogpdxfr7qpb0op.vusercontent.net/placeholder.svg?height=200&width=300&text=Easy+Money",
+    alt: "Digital transformation blog post",
+    category: "BUSINESS",
+    date: "23 August 2020",
+    link: "/blog/digital-transformation",
+  },
+]

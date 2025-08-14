@@ -97,7 +97,7 @@ export default function WhyUsSection({ whyUsSectionData }: WhyUsSectionProps) {
 
 
   return (
-    <div className="bg-white sm:py-16 lg:py-24" ref={ref}>
+    <div className="bg-white sm:py-10 lg:py-16" ref={ref}>
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex flex-col-reverse sm:flex-row sm:gap-12 items-center">
           {/* Left Section: Text and Features */}

@@ -146,7 +146,7 @@ export default function ServicesSection({ serviceSectionData }: ServicesSectionP
   }
 
   return (
-    <div className="bg-white text-gray-900 lg:py-24">
+    <div className="bg-white text-gray-900 lg:py-16">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-12">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row justify-start sm:justify-between sm:items-center gap-8 md:gap-16 mb-12 lg:mb-20">

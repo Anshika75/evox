@@ -45,7 +45,7 @@ export default function FaqSection({ faqSectionData }: FaqSectionProps) {
   }
 
   return (
-    <div className="bg-white text-gray-900 py-16 lg:py-24">
+    <div className="bg-white text-gray-900 py-10 lg:py-16">
       <div className="px-4 sm:px-6 lg:px-12">
         <div className="flex items-start">
           {/* Left Section: Image */}

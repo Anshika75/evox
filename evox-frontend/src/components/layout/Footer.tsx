@@ -68,7 +68,7 @@ export default function Footer({ footerData }: NavbarProps) {
     const currentYear = new Date().getFullYear()
 
     return (
-        <footer className="bg-custom-black text-gray-300 py-16 lg:py-24">
+        <footer className="bg-custom-black text-gray-300 py-10 lg:py-16">
             <div className="px-4 sm:px-6 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 border-b border-gray-700">
 
