@@ -24,7 +24,7 @@ services:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
-      - ./package-lock.json:/opt/package-lock.json  # Changed from yarn.lock to package-lock.json
+      - ./package-lock.json:/opt/package-lock.json  
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
@@ -48,6 +48,7 @@ services:
       # - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
       # - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
       # - "traefik.http.routers.backend.middlewares=redirect-to-https"
+      
     networks:
       - evox
     depends_on:
@@ -76,5 +77,4 @@ volumes:
 
 networks:
   evox:
-    name: evox
-    driver: bridge
+    external: true

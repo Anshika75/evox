@@ -20,7 +20,6 @@ services:
         - "443:443"
         - "8080:8080"
         - "465:465"
-        # - "9090:9090"
       volumes:
         - /var/run/docker.sock:/var/run/docker.sock
         - ./config/traefik.yml:/etc/traefik/traefik.yml:ro
@@ -30,7 +29,7 @@ services:
       environment:
         - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
       networks:
-        - kcare
+        - evox
 networks:
-  kcare:
+  evox:
     external: true
