@@ -48,6 +48,16 @@ services:
       - "traefik.http.routers.backend-secure.tls=true"
       - "traefik.http.routers.backend-secure.tls.certresolver=cloudflare"
       - "traefik.http.routers.backend-secure.priority=10"
+
+     # HTTPS - Admin panel on subdomain
+
+      - "traefik.http.routers.backend-admin-secure.rule=Host(`admin.evoxsolution.com`)"
+      - "traefik.http.routers.backend-admin-secure.entrypoints=websecure"
+      - "traefik.http.routers.backend-admin-secure.tls=true"
+      - "traefik.http.routers.backend-admin-secure.tls.certresolver=cloudflare"
+      - "traefik.http.routers.backend-admin-secure.priority=10"
+
+
       - "traefik.http.services.backend.loadbalancer.server.port=1337"
 
             # Optional: HTTP to HTTPS redirect middleware
