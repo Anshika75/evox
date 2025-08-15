@@ -19,12 +19,13 @@ services:
       API_TOKEN_SALT: ${API_TOKEN_SALT}
       TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
       APP_KEYS: ${APP_KEYS}
-      NODE_ENV: ${NODE_ENV}
+      NODE_ENV: development
+
     volumes:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
-      - ./package-lock.json:/opt/package-lock.json  # Changed from yarn.lock to package-lock.json
+      - ./package-lock.json:/opt/package-lock.json  
       - ./.env:/opt/app/.env
       - ./public/uploads:/opt/app/public/uploads
     ports:
@@ -38,16 +39,18 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.backend.rule=Host(`evoxsolution.com`) && PathPrefix(`/api`)"
-      - "traefik.http.routers.backend.entrypoints=web"
-      - "traefik.http.routers.backend.priority=10" 
+      # - "traefik.http.routers.backend.rule=Host(`evoxsolution.com`) && PathPrefix(`/api`)"
+      # - "traefik.http.routers.backend.entrypoints=web"
+      # - "traefik.http.routers.backend.priority=10" 
 
        # For HTTPS (uncomment when ready):
+       
       - "traefik.http.routers.backend-secure.rule=Host(`evoxsolution.com`) && PathPrefix(`/api`)"
       - "traefik.http.routers.backend-secure.entrypoints=websecure"
       - "traefik.http.routers.backend-secure.tls=true"
       - "traefik.http.routers.backend-secure.tls.certresolver=cloudflare"
       - "traefik.http.routers.backend-secure.priority=10"
+      - "traefik.http.routers.backend-admin.service=backend"
 
      # HTTPS - Admin panel on subdomain
 
@@ -56,6 +59,7 @@ services:
       - "traefik.http.routers.backend-admin-secure.tls=true"
       - "traefik.http.routers.backend-admin-secure.tls.certresolver=cloudflare"
       - "traefik.http.routers.backend-admin-secure.priority=10"
+      - "traefik.http.routers.backend-admin.service=backend"
 
 
       - "traefik.http.services.backend.loadbalancer.server.port=1337"
@@ -64,6 +68,8 @@ services:
       # - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
       # - "traefik.http.middlewares.redirect-to-https.redirectscheme.permanent=true"
       # - "traefik.http.routers.backend.middlewares=redirect-to-https"
+
+
     networks:
       - evox
     depends_on:
