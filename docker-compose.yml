@@ -1,0 +1,36 @@
+services:
+  reverse-proxy:
+      image: traefik:v3.3
+      # command: --api.insecure=true --providers.docker
+      # command:
+      # - "--api.dashboard=true"
+      # - "--log.level=DEBUG"
+      # - "--entrypoints.web.address=:80"
+      # - "--entrypoints.websecure.address=:443"
+      # - "--providers.docker=true"
+      # - "--providers.docker.exposedbydefault=false"
+      # - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
+      # - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
+      # - "--certificatesresolvers.myresolver.acme.email= avichalllkumar@gmail.com"
+      # - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+
+      
+      ports:
+        - "80:80"
+        - "443:443"
+        - "8080:8080"
+        - "465:465"
+        # - "9090:9090"
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - ./config/traefik.yml:/etc/traefik/traefik.yml:ro
+        - ./data/certs/:/var/traefik/certs/:rw
+      restart: unless-stopped
+
+      environment:
+        - CF_DNS_API_TOKEN=${CF_DNS_API_TOKEN}
+      networks:
+        - kcare
+networks:
+  kcare:
+    external: true

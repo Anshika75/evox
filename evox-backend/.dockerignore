@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+.tmp
+.cache
+build
+.strapi-updater.json
+# .env
+.git
+README.md
+.DS_Store
+coverage
+.nyc_output
+# Dockerfile
+# docker-compose.yml
