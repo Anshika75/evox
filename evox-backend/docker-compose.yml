@@ -44,7 +44,7 @@ services:
       # - "traefik.http.routers.backend.priority=10" 
 
        # For HTTPS (uncomment when ready):
-
+       
       - "traefik.http.routers.backend-secure.rule=Host(`evoxsolution.com`) && PathPrefix(`/api`)"
       - "traefik.http.routers.backend-secure.entrypoints=websecure"
       - "traefik.http.routers.backend-secure.tls=true"
@@ -104,5 +104,4 @@ volumes:
 
 networks:
   evox:
-    driver: bridge
-    name: evox
+    external: true
