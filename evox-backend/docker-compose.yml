@@ -32,9 +32,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
-        reservations:
           memory: 1G
+        reservations:
+          memory: 512M
 
     labels:
       - "traefik.enable=true"
