@@ -22,27 +22,27 @@ export default ({ env }) => ({
   },
   
   // Optional: Add other performance plugins
-  'rest-cache': {
-    enabled: true,
-    config: {
-      provider: {
-        name: 'memory',
-        options: {
-          max: 32767,
-          maxAge: 3600000, // 1 hour
-        },
-      },
-      strategy: {
-        enableEtag: true,
-        logs: true,
-        clearRelatedCache: true,
-        maxAge: 3600000,
-        contentTypes: [
-          // Add your content types here
-          'api::article.article',
-          'api::category.category',
-        ],
-      },
-    },
-  },
+  // 'rest-cache': {
+  //   enabled: true,
+  //   config: {
+  //     provider: {
+  //       name: 'memory',
+  //       options: {
+  //         max: 32767,
+  //         maxAge: 3600000, // 1 hour
+  //       },
+  //     },
+  //     strategy: {
+  //       enableEtag: true,
+  //       logs: true,
+  //       clearRelatedCache: true,
+  //       maxAge: 3600000,
+  //       contentTypes: [
+  //         // Add your content types here
+  //         'api::article.article',
+  //         'api::category.category',
+  //       ],
+  //     },
+  //   },
+  // },
 });
