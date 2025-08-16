@@ -11,8 +11,7 @@ export default ({ env }) => ({
           Bucket: env('R2_BUCKET'),
         },
         // This is the public URL where files will be accessible
-        baseUrl: env('R2_PUBLIC_URL'),
-        rootPath: env('R2_ROOT_PATH', ''),
+        cloudflarePublicAccessUrl: env('R2_PUBLIC_URL'),
       },
       actionOptions: {
         upload: {
