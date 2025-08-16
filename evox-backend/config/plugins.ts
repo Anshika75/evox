@@ -1,7 +1,7 @@
 export default ({ env }) => ({
   upload: {
     config: {
-      provider: 'strapi-provider-upload-cloudflare-r2',
+      provider: 'strapi-provider-cloudflare-r2',
       providerOptions: {
         accessKeyId: env('R2_ACCESS_KEY_ID'),
         secretAccessKey: env('R2_SECRET_ACCESS_KEY'),
@@ -12,17 +12,12 @@ export default ({ env }) => ({
         },
         // This is the public URL where files will be accessible
         // cloudflarePublicAccessUrl: 'https://cdn.evoxsolution.com',
-        publicUrl: 'https://cdn.evoxsolution.com',
-        cloudflarePublicAccessUrl: 'https://cdn.evoxsolution.com',
-        baseUrl: 'https://cdn.evoxsolution.com',
+        cloudflarePublicAccessUrl: env('R2_PUBLIC_URL', 'https://cdn.evoxsolution.com'),
+        
       },
       actionOptions: {
-        upload: {
-          ACL: 'public-read',
-        },
-        uploadStream: {
-          ACL: 'public-read',
-        },
+        upload: {},
+        uploadStream: {},
         delete: {},
       },
     },

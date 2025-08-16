@@ -23,7 +23,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
-    "strapi-provider-upload-cloudflare-r2": "^1.0.2",
+    "strapi-provider-cloudflare-r2": "^0.3.0",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -31,7 +31,7 @@
     "@types/pg": "^8.15.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5"  
+    "typescript": "^5"
   },
   "engines": {
     "node": ">=18.0.0 <=22.x.x",
