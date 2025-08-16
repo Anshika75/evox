@@ -11,7 +11,7 @@ export default ({ env }) => ({
           Bucket: env('R2_BUCKET'),
         },
         // This is the public URL where files will be accessible
-        cloudflarePublicAccessUrl: env('R2_PUBLIC_URL') || 'https://cdn.evoxsolution.com',
+        cloudflarePublicAccessUrl: 'https://cdn.evoxsolution.com',
       },
       actionOptions: {
         upload: {
