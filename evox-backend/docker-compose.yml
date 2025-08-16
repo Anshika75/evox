@@ -21,13 +21,21 @@ services:
       APP_KEYS: ${APP_KEYS}
       NODE_ENV: development
 
+      # R2 Configuration
+      R2_ACCESS_KEY_ID: ${R2_ACCESS_KEY_ID}
+      R2_SECRET_ACCESS_KEY: ${R2_SECRET_ACCESS_KEY}
+      R2_BUCKET: ${R2_BUCKET}
+      R2_REGION: ${R2_REGION}
+      R2_ENDPOINT: ${R2_ENDPOINT}
+      R2_PUBLIC_URL: ${R2_PUBLIC_URL}
+
     volumes:
       - ./config:/opt/app/config
       - ./src:/opt/app/src
       - ./package.json:/opt/package.json
       - ./package-lock.json:/opt/package-lock.json  
       - ./.env:/opt/app/.env
-      - ./public/uploads:/opt/app/public/uploads
+      # - ./public/uploads:/opt/app/public/uploads
     ports:
       - "1337:1337"
     deploy:
